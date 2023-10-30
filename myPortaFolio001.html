@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- font awesome 6 cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!-- Entire page google font cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+
+    <!-- intro img google font cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- about me heading google font cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <!-- tag names google font cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    <!-- counter text google font cdn-->
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- bootstrap 5.2.3 cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <!---- jquery 3.7.1 CDN ------>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="first.css">
+    
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>My Portfolio</title>
+
+    <script>
+
+// FULL PAGE ANIMATION (JQUERY)
+
+
+$(document).ready(function()
+	{
+		$(window).scroll(function(){
+			var positiontop=$(document).scrollTop();
+			// console.log(positiontop);
+
+			if ((positiontop>325)&&(positiontop<400))
+			{	
+				$("#bio").addClass("cutout_anim");
+			}
+
+			if ((positiontop>20)&&(positiontop<50))
+			{	
+				$("#counter_img_div").addClass("counter_img_animation");
+			}
+
+			if ((positiontop>25)&&(positiontop<50))
+			{	
+				$("#counter1").addClass("counter1_anim");
+				$("#counter2").addClass("counter2_anim");
+				$("#counter3").addClass("counter3_anim");
+				$("#counter4").addClass("counter4_anim");
+			}
+
+			if((positiontop>380)&&(positiontop<480))
+			{
+				$("#biotext_1").addClass("biotext1_anim");
+				$("#biotext_2").addClass("biotext2_anim");
+			}
+
+			if((positiontop>1650)&&(positiontop<1800))
+			{
+				$("#abt_me").addClass("abt_me_anim");
+			}
+
+			if((positiontop>3050)&&(positiontop<3200))
+			{
+				$("#project1").addClass("project1_anim");
+				$("#project2").addClass("project2_anim");
+				$("#project3").addClass("project3_anim");
+			}
+
+			if((positiontop>3750)&&(positiontop<3900))
+			{
+				$("#footer_img").addClass("footer_img_anim");
+				$("#footer_text").addClass("footer_text_anim");
+			}
+		})
+	})
+
+
+
+    </script>
+
+  </head>
+<body class="opening_page">
+
+
+    <div class="container-fluid  mt-2 pb-0" style="overflow:hidden">
+
+    <nav >
+
+
+
+    <div class="row" id="page_top" style="overflow :hidden" >
+        <div class="col-md-10 offset-md-1 mt-3 navbar_bg" >
+
+            <nav class="navbar navbar-expand-lg w-100">
+            <div class="container-fluid">
+                <a href="#"> <img src='imgs/logo.jpg' alt="" class="logo_size img-fluid"/> </a>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<h5 style="color: white">  Select Lenguage: </h5>
+
+                <a href="/homeSpanish.html"> <img src='imgs/Flag_of_Venezuela.png' alt="" class="logo_size img-fluid"/> </a>
+                &nbsp; &nbsp;
+                
+                <!--
+                <NavLink to="/homeSpanish" style= textDecoration: "none", color: "inherit",   
+                       >
+                    <img class="logo_size img-fluid flat_icons" src={Venezuela_Flat} alt="" style=cursor:"pointer"/>
+                </NavLink> -->
+                
+                &nbsp; &nbsp;
+                
+                
+               <a href="/home"> <img src='imgs/EEUU FLAT.png' alt="" class="logo_size img-fluid"/> </a>
+               
+               <!--
+               <NavLink to="/" style= textDecoration: "none", color: "inherit" >
+                    <img class="logo_size img-fluid flat_icons border border-light border-4" src={EEUU_Flat} alt="" style=cursor:"pointer"  />
+                </NavLink> -->
+                
+                &nbsp; &nbsp;
+                <h5 class="text-center mt-3" style="color: white">English</h5>
+
+                <!---
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+                <span> <i onClick={openNav} class="fa-solid fa-bars-staggered nav_toggler"> </i> </span>
+                </button> -->
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+
+                 
+
+                    <div class="collapse offset-md-4 navbar-collapse" id="collapsibleNavbar">
+
+                       <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0"> -->
+                        
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item">
+                            <a class="nav-link nav_text btn btn_effect" href="#abt_me"> About Me </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                            <a class="nav-link nav_text btn btn_effect" href="#" data-bs-toggle="modal" data-bs-target="#contactModal" onClick={contact_alert}> Contact Me </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                            <a class="nav-link nav_text btn btn_effect" href="#project"> My Projects </a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            </nav>
+        </div>
+
+
+    </div>
+
+ 
+
+    <div id="myNav" class="overlay">
+
+        <a href="javascript:void(0)" class="closebtn" onClick={closeNav}>&times;</a>
+
+        <div class="overlay-content">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="btn_effect">Contact Me</a>
+        <a href="#abt_me" class="btn_effect">About Me</a>
+        <a href="#project" class="btn_effect">Projects</a>
+        </div>
+
+    </div>
+
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+  .FirstSectionPosition {margin-left: 10%;
+                         margin-top: -2%;}
+
+ .positionGoal{position: relative;
+                 top: 3em;
+                 left: 40em;
+                margin-bottom: 7em;}
+
+ .skillsStyleText {color:  #CBB26A; 
+                   font-size: 2ex;}                
+</style>
+
+
+
+
+<!------ openingpage section ----------------------------->
+
+<div class="row mt-5 mb-1 pt-5 ">
+
+    <!--------------------------------- First Section ---------------------------->
+
+    <div class="container-fluid d-flex flex-row align-content-center">
+    <div class="container-fluid d-flex flex-column">
+    <div class="container-fluid d-flex flex-column FirstSectionPosition">
+
+
+
+        
+
+    <div class="flex flex-row  items-center lg:text-lg text-base text-gray-400 container-fluid">
+        <p class="text-xs italic lg:text-sm font-code text-code">&lt;p&gt;</p>
+        <p class="">This is</p>
+        <p class="text-xs italic lg:text-sm font-code text-code">&lt;/p&gt;</p>
+    </div>
+
+    
+        <div class=" flex flex-col  2xl:text-7xl lg:text-6xl md:text-5xl text-4xl text-white font-bold container-fluid">
+            <p class="text-xs italic lg:text-sm font-code text-code">&lt;h1&gt;</p>
+            <div class="flex pl-6 container-fluid" > 
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                style="font-size: 4.5vw !important;">S</span>
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125" style="font-size: 4.5vw !important;">e</span>
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125" style="font-size: 4.5vw !important;">r</span>
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125" style="font-size: 4.5vw !important;">g</span>
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125" style="font-size: 4.5vw !important;">i</span>
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125" style="font-size: 4.5vw !important;">o</span>
+                <span class="transition-all cursor-pointer hover:text-code hover:scale-125" style="font-size: 4.5vw !important;">&nbsp;</span>
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">M</span>
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">o</span>
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">n</span>
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">c</span>
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">a</span> 
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">d</span>
+                 <span class="transition-all cursor-pointer hover:text-code hover:scale-125"
+                 style="font-size: 4.5vw">a</span> 
+             </div>
+             <p class="text-xs italic lg:text-sm font-code text-code">&lt;/h1&gt;</p>
+         </div>
+   
+
+
+
+
+    
+        <div class="flex flex-row  items-center 2xl:text-4xl lg:text-3xl text-2xl text-gray-400 container-fluid">
+            <p class="text-xs italic lg:text-sm font-code text-code">&lt;h3&gt;</p>
+            <p class="">Full-Stack Developer</p>
+            <p class="text-xs italic lg:text-sm font-code text-code">&lt;/h3&gt;</p>
+        </div>
+    
+    </div>
+<!------------------------------------First Section End Block ---------------->
+
+
+
+
+    <div class="col-lg-5 offset-md-1 intro mb-2 mx-auto text-center">
+
+
+
+        <!--Hi, <br /> I'm Sergio Moncada,-->
+        <br/>
+        <div class="morph_cont">
+            <div class="morph_word">Full Stack Developer</div>
+            <div class="morph_word">Front End Developer</div>
+            <div class="morph_word">Back End Developer</div>
+            <div class="morph_word">Desktop Developer</div>
+            <div class="morph_word">Graphic Designer</div>
+            <div class="morph_word">Content Creator video </div>
+            <div class="morph_word">Content Creator audio </div>
+      
+           
+        </div>
+        <br/>
+        <p style="color: blanchedalmond;">I build interactive websites that run <br /> across platforms & devices.</p>
+        
+    </div>
+  
+    
+    
+
+
+
+
+
+
+    </div> <!---End Block two first div -->
+   
+
+    <div class="col-md-4  mb-5 text-center offset-md-1 mx-auto container-fluid">
+        <img src='imgs/FOTOMOD002.jpg'alt="" class="mifoto_size img-fluid img-thumbnail"/>
+        <h4  style="color:white ; margin-right: 7em;" >System Eng. Sergio G. Moncada</h4>
+    </div>
+
+
+
+
+
+
+
+  
+</div> <!--- End Block First section and Photo ----------------------->
+
+<!------------------GOAL SECTION  ----------------------------------------->
+
+<div class=" transition-all md:w-4/12 -rotate-12 hover:rotate-6 positionGoal" >
+    <img  src="imgs/goal.png" alt="" class="border-2 rounded-md shadow-2xl border-sec shadow-black "
+      style="min-width: 25vh; "/>
+    
+</div>
+
+<!------------------END BLOCK GOAL SECTION  ------------------------------->
+
+
+</div>
+
+
+
+</div> <!------ openingpage section END BLOCK ----------------------------->
+
+
+<!--------------------------- COUNTER section ----------------------------->
+
+<div class="container-fluid py-3 counter_container" style="overflow: hidden">
+
+    <div class="row">
+
+        <div class='counter_img_cont mx-auto' id='counter_img_div'>
+            <img src='imgs/float_img1.png' alt='counter_image' class='counter_img_size' />
+        </div>
+
+        <div class='col-md-8 mx-auto d-flex flex-wrap' style="overflow:hidden">
+
+            <div class='counter mx-auto mt-3 counter_text text-center' id='counter1'>
+               
+                <p> <i class="fa-solid fa-clock" style="fontSize:45"></i> </p>
+                <h3 class="count counter_text">12,000+</h3> 
+                <p> Working Hours </p>
+            
+            </div>
+
+            <div class='counter mx-auto mt-3 counter_text text-center' id='counter2'>
+
+                <p> <i class="fa-solid fa-code" style="fontSize:45"></i> </p> 
+                <h3 class="count counter_text">55,000+</h3>
+                <p> Lines Of Code </p>
+
+            </div>
+
+            <div class='counter mx-auto mt-3 counter_text text-center' id='counter3'>
+
+                <p> <i class="fa-solid fa-mug-saucer" style="fontSize:45"></i> </p>
+                <h3 class="count counter_text">500+</h3>
+                <p> Cups of Coffee </p>
+
+            </div>
+
+            <div class='counter mx-auto mt-3 counter_text text-center' id='counter4'>
+
+                <p> <i class="fa-solid fa-cloud-moon" style="fontSize:45"></i> </p>
+                <h3 class="count counter_text">600+</h3>
+                <p>  Sleepless Nights </p>
+
+            </div>
+
+        </div>                    
+
+    </div>
+
+</div>
+
+
+
+<!--------------------------- COUNTER section END BLOCK ------------------->
+<!--------------------------- bio section  -------*************------------>
+
+<div class="container-fluid p-0 bio_text_cont" style="overflow:hidden">
+
+    <div class="row cutout_box">
+        <h1 class="cutout_text" id="bio">MY BIO</h1>
+    </div>
+
+    <div class="row p-5">
+
+        <div class="col-lg-6 mx-auto text-center bio1_container bio_text" id="biotext_1">
+            
+                    <h2><mark class="h2">Web</mark> 
+                    <mark class="h2">Developer</mark> <br /> 
+                    <mark class="h2">Front End Developer</mark> <br>
+                    <mark class="h2">Back End Developer</mark>
+                    
+                    </h2>
+
+            <div class="text-center py-0"><img src='imgs/bio_img.png' alt="" class="bio_img_size" /></div>
+
+        </div>
+
+        <div class="col-lg-5 mx-auto bio_text_2 text-center" id="biotext_2">
+            
+        <h4 class="tag_name mb-3"> bio</h4>
+
+            I'm a <b>Full Stack web developer</b> based in <b>Valencia, Venezuela.</b> With a speciality in <b>Front End Development</b>. I possess a vast array of knowledge in many different front end,back end  and desktop languages, responsive frameworks and databases management systems. My objective is simply to be the best web developer that I can be and to contribute to the technology industry. <br /><br />
+
+            Although I'm very familiar with using frameworks, my websites are primarily hand-coded using <b>HTML5, CSS3, Bootstrap, JavaScript: React,  Redux, Angular & Jquery, for FrontEnd, and NodeJS, Express for Backend .</b> <br /><br /> 
+
+            With a strong emphasis on <b>"Progressive Enhancement"</b>, I look for creative ways to push the boundaries of website development without compromising on browser support while following best code practices. <br /><br />
+
+            In a quest for always keeping <b>myself updated</b>, I read books and attend seminars & meetups.
+
+        <h4 class="tag_name mb-3"> /bio </h4>
+
+        <button type="button" class="cv_button w-75 mt-4" 
+        title="SHOW CV">
+                <a href= './pdf_files/cur_sergio_eng.pdf' target = "_blank">  
+                    Curriculum Vitae (PDF) <i class="fa-solid fa-download ms-2"></i>
+                </a>
+        </button>
+        
+        </div>
+
+    </div>
+</div>
+
+ <!--------------------------- bio section  END BLOCK *********------------>   
+<!-----------------------------ABTME SECTION BEGIN BLOCK ------------------>
+
+<div class="container-fluid abtme_bg pb-5" style="overflow:hidden" id="abt_me">
+
+    <!------------------------ heading start --------------------->
+            <div class="row">
+                <div class="col-md-5 mx-auto text-center abt_me_heading abt_me_anim" >
+                    ABOUT ME
+                </div>
+            </div>
+    <!------------------------ heading end ---------------------->
+    
+
+</div>  
+
+<div class="row">
+    <div class="col-md-10 mx-auto d-flex flex-wrap mt-2 mb-4 justify-content-center bio_tabs">
+
+
+<div data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark rounded-4">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item tabs active flex-item mx-auto tablinks">
+            <a class="nav-link" href="#section1">MY SKILLS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2">EDUCATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3">EXPERIENCE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3">ADDITIONAL SKILLS</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+
+    <!---- SKILLS BLOCK BEGINING ---------------------------------------------->
+   
+    <!----First line, Three Options ------------->
+
+
+
+    <div id="section1" class="d-flex flex-wrap" style="padding:100px 20px;">
+      
+
+      <div class="d-flex text-white flex-wrap">    
+
+             <!----First Option -------------------------->
+        <div class="p-2  flex-fill">
+       
+            <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+            font-size: 1.8ex;">
+            <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+            <span class="transition-all text-code group-hover:text-sub" > &lt; </span>
+            MARKUP / STYLING LANGUAGE
+        <span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+    </h2>
+
+        </div>  <!----First Option END BLOCK-------------------------->
+
+ <!---- SEcond Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+           <div class="d-flex flex-row ">
+
+           <div><p class="skillsStyleText"  >HTML</p></div>
+           &nbsp; &nbsp;
+           <div><img src='imgs/html.png' alt="" class="img-fluid rounded" 
+            style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+        </div>
+</div> <!---- Second Option END BLOCK-------------------------->
+
+
+
+     <!---- Third Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row">
+
+    <div><p class="skillsStyleText"  >CSS3</p></div>
+    &nbsp; &nbsp;
+    <div><img src='imgs/css.png' alt="" class="img-fluid rounded" 
+     style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+ </div>
+</div> <!---- Third Option END BLOCK-------------------------->
+
+ <!---- 4th Option -------------------------->   
+ <div class="p-2 flex-fill" style="display: inline" >
+
+    <div class="d-flex flex-row ">
+
+    <div><p class="skillsStyleText"  >SASS</p></div>
+    &nbsp; &nbsp;
+    <div>
+        <img src='imgs/sass.png' alt="" class="img-fluid rounded" 
+     style="height: 4em; width: 4em; margin-top: -1.3em;" /> 
+     
+    </div>
+ </div>
+</div> <!---- Third Option END BLOCK-------------------------->
+
+
+
+
+
+
+
+</div> <!---- End of First Line SKILLs ------------------------------------------------>
+
+<!--- Second LINE Block Begining ------------------------------------------------------>
+<div class="d-flex text-white mt-5 flex-wrap">    
+
+    <!----First Option -------------------------->
+<div class="p-2  flex-fill">
+
+   <h2 class="text-lg text-gray-400 flex items-center gap-x-2 group hover:text-white transition-all font-code cursor-pointer z-50" style="
+   font-size: 1.8ex;">
+   <div class="h-[5px] w-1 rounded-full bg-sec "></div>
+   <span class="transition-all text-code group-hover:text-sub"> &lt; </span>
+   CSS FRAMEWORK
+<span class="transition-all text-code group-hover:text-sub"> /&gt;</span>
+</h2>
+
+</div>  <!----First Option END BLOCK-------------------------->
+
+<!---- SEcond Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+  <div class="d-flex flex-row ">
+
+  <div><p class="skillsStyleText"  >BOOTSTRAP 5</p></div>
+  &nbsp; &nbsp;
+  <div><img src='imgs/bootstrap.png' alt="" class="img-fluid rounded" 
+   style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+</div>
+</div> <!---- Second Option END BLOCK-------------------------->
+
+
+
+<!---- Third Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+<div class="d-flex flex-row ">
+
+<div><p class="skillsStyleText"  >MATERIALIZE</p></div>
+&nbsp; &nbsp;
+<div><img src='imgs/materialize.png' alt="" class="img-fluid rounded" 
+style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+</div>
+</div> <!---- Third Option END BLOCK-------------------------->
+
+<!---- 4th Option -------------------------->   
+<div class="p-2 flex-fill" style="display: inline" >
+
+<div class="d-flex flex-row ">
+
+<div><p class="skillsStyleText"  >TAILWIND</p></div>
+&nbsp; &nbsp;
+<div><img src='imgs/Tailwind css.png' alt="" class="img-fluid rounded" 
+style="height: 4em; width: 4em; margin-top: -1.3em;" /> </div>
+</div>
+</div> <!---- Third Option END BLOCK-------------------------->
+
+
+</div> <!---- End of 2da Line SKILLs ------------------------------------------------>
+<!--- Second LINE Block End ------------------------------------------------------>
+
+
+
+
+
+
+
+
+  
+    </div> <!----End of Section 1 block ----------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+<!--------------------SKILLS BLOCK END ----------------------------------------->
+
+
+
+
+    <div id="section2" class="container-fluid bg-warning" style="padding:100px 20px;">
+      <h1>Section 2</h1>
+      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    </div>
+    
+    <div id="section3" class="container-fluid bg-secondary text-white" style="padding:100px 20px;">
+      <h1>Section 3</h1>
+      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    </div>
+    
+    </div>
+
+</div>
+</div>
+
+<!------------------------------ABTME SECTION END BLOCK ------------------->
+</body>
+</html>
